@@ -1,0 +1,23 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            clientId: 762243199628-2oh549n49ophct2gq18lq75o9it2h829.apps.googleusercontent.com
+            clientSecret: 5PHIMatOj6SqgwCuoezBpRV6
+            redirectUri: "{baseUrl}/oauth2/callback/{registrationId}"
+            scope:
+              - email
+              - profile
+          facebook:
+            clientId: 582462826220451
+            clientSecret: a2ed36f5e658dd0a8385421723ad818a
+            scope:
+              - user:email
+              - read:user
+app:
+  tokenSecret: 926D96C90030DD58429D2751AC1BDBBC
+  tokenExpirationMsec: 864000000
+  authorizedRedirectUris:
+    - http://localhost:3000/oauth2/redirect
